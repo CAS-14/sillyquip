@@ -1,0 +1,4 @@
+{
+    "_COMMENT": "This file can be placed in your home (user) folder to override the ransomware and tell it to only search the specified directories. Not case-sensitive.",
+    "directories": ["test"]
+}
